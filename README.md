@@ -8,6 +8,8 @@ The plugin is looking for a package.json file to get a NodeJS version and then s
 
 After getting a node version, if the version is not currently installed in the machine this plugin will install it for you.
 
+You also can configure the implicit installation/update of your package by environment variables.
+
 ## Plugin Requirements
 
 For the use of this plugin it's required the installation of:
@@ -25,4 +27,6 @@ For the installation you need to
 
 After the installation you need to add `node-env-installer` in the `plugins = (...)` variable of your `.zshrc` file.
 
-If you want the plugin to install all dependencies in your projects you can use the next command `echo "export ZSH_NPM_AUTOINSTALL='true'"`
+If you want the plugin to install all dependencies in your projects you can use the next command `echo "export ZSH_NPM_AUTOINSTALL='true' >> ~/.zshrc".`
+
+This last command will set an environment variable that let know the plugin to install and update everytime there is a change in the `package.json` file.
