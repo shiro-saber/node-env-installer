@@ -1,6 +1,10 @@
 # Node Env Installer
 
-This plugin enables the installation of new NodeJS versions for your current project.
+This plugin lets nvm install new versions and modules for the current project.
+
+## Functionality
+
+The plugin is looking for a package.json file to get a NodeJS version and then set it as the current using version.
 
 ## Plugin Requirements
 
