@@ -8,7 +8,7 @@ The plugin is looking for a package.json file to get a NodeJS version and then s
 
 After getting a node version, if the version is not currently installed in the machine this plugin will install it for you.
 
-You also can configure the implicit installation/update of your package by environment variables.
+You also can configure the implicit installation/update of your package by environment variables, this will use the [npm-install-changed](https://www.npmjs.com/package/npm-install-changed) for the update of the modules.
 
 ## Plugin Requirements
 
