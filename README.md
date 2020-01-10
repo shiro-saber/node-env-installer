@@ -2,6 +2,10 @@
 
 This plugin lets nvm install new versions and modules for the current project.
 
+Here is a preview of the plugin
+
+![Preview Image](/preview.png)
+
 ## Functionality
 
 The plugin is looking for a package.json file to get a NodeJS version and then set it as the current using version.
