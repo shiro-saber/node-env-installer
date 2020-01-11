@@ -18,7 +18,9 @@ You also can configure the implicit installation/update of your package by envir
 
 For the use of this plugin it's required the installation of:
 
-* nvm
+* [nvm](https://github.com/nvm-sh/nvm)
+* [zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
+* [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
 
 ## Installation
 
