@@ -33,6 +33,6 @@ For the installation you need to
 
 After the installation you need to add `node-env-installer` in the `plugins = (...)` variable of your `.zshrc` file.
 
-If you want the plugin to install all dependencies in your projects you can use the next command `echo "export ZSH_NPM_AUTOINSTALL='true' >> ~/.zshrc".`
+If you want the plugin to install all dependencies in your projects you can use the next command `echo "export ZSH_NPM_AUTOINSTALL='true'" >> ~/.zshrc`
 
 This last command will set an environment variable that let know the plugin to install and update everytime there is a change in the `package.json` file.
