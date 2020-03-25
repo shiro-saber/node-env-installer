@@ -55,8 +55,17 @@ use_node_version () {
             fi
 
         # If not package.json file is found returns an error message.
-        elif [ -f "package.json" ]; then
+        elif [[ -f "package.json" && -f "node_modules" ]]; then
             echo "Could not get the version of this NodeJS project"
+        else
+            # If the user allows the auto install of the modules in each project
+            if [[ -n $ZSH_NPM_AUTOINSTALL && $ZSH_NPM_AUTOINSTALL == "true" ]]; then
+                echo "Updating node package modules"
+                npm install -g npm > /dev/null 2>&1
+                [ ! -d ~/.nvm/versions/node/v$NODE_VERSION/lib/node_modules/npm-install-changed ] npm install -g npm-install-changed > /dev/null 2>&1
+                [ ! -d node_modules ] && npm install > /dev/null 2>&1
+                [ -d node_modules ] && npm-install-changed > /dev/null 2>&1
+            fi
         fi
     fi
 }
