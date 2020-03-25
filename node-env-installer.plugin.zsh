@@ -15,11 +15,9 @@ use_node_version () {
     if [ -f "package.json" ]; then
         # Gets the version of the package.json with the next format:
         # {
-        #    "engine": {
-        #       "node": "10.16.3"
-        #    }
+        #    "node": "10.16.3"
         # }
-        NODE_VERSION=`cat package.json 2> /dev/null | grep node | head -1 | awk -F: '{ print $2 }' | sed 's/[",]//g' | tr -d '[[:space:]]'`
+        NODE_VERSION=`cat package.json 2> /dev/null | grep \"node\" | head -1 | awk -F: '{ print $2 }' | sed 's/[",]//g' | tr -d '[[:space:]]'`
 
         if [ "$NODE_VERSION" ]; then
 
